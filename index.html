@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Bank</title><style>:root{--bg:#f5f8fc;--card:#fff;--text:#17233b;--muted:#71809a;--primary:#1677f2;--nav:#061a38;--border:#e8edf4;--shadow:0 10px 30px rgba(20,45,90,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select{font:inherit}.hidden{display:none!important}.muted{color:var(--muted)}
+.auth{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,#edf4ff,#f8fbff)}.auth-card{width:min(430px,100%);background:#fff;padding:34px;border-radius:24px;box-shadow:var(--shadow)}.logo{font-size:29px;font-weight:850}.logo span,.brand-name span{color:#1677f2}.auth h1{margin:26px 0 8px;font-size:28px}.field{margin:16px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}input,select{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;outline:none;background:#fff}input:focus,select:focus{border-color:#1677f2;box-shadow:0 0 0 3px #1677f218}.btn{border:0;border-radius:11px;padding:13px 17px;cursor:pointer;font-weight:700}.btn-primary{background:linear-gradient(135deg,#1677f2,#315efb);color:#fff;width:100%}.btn-ghost{background:#eef4ff;color:#1677f2}.link{color:#1677f2;font-weight:700;cursor:pointer}.error{color:#dc2626;font-size:13px;margin-top:10px}.success{color:#16a34a;font-size:13px;margin-top:10px}
+.layout{min-height:100vh;display:grid;grid-template-columns:285px 1fr}.sidebar{background:linear-gradient(180deg,#061a38,#03142d);color:#fff;padding:30px 20px;display:flex;flex-direction:column;min-height:100vh}.brand{display:flex;gap:12px;align-items:center;padding:0 12px 35px}.brand-mark{width:42px;height:42px;color:#1781ff}.brand-mark svg{width:100%;height:100%}.brand-name{font-size:27px;font-weight:850;letter-spacing:-1px}.brand-tag{font-size:11px;color:#aab9d0;margin-top:3px}.side-nav{margin-top:4px}.nav-item{display:flex;align-items:center;gap:14px;width:100%;border:0;background:#1677f2;color:#fff;padding:14px 16px;border-radius:11px;font-weight:700;box-shadow:0 8px 18px #1677f238}.nav-icon{font-size:22px}.secure-art{margin: auto auto 10px;position:relative;height:140px;width:190px;display:grid;place-items:center;color:#1680ff}.secure-bank{font-size:100px;line-height:1;opacity:.72}.secure-shield{position:absolute;right:20px;bottom:15px;background:#1677f2;color:#fff;border-radius:18px 18px 22px 22px;padding:16px 18px;font-size:25px;box-shadow:0 8px 20px #0004}.secure-title{text-align:center;color:#1680ff;font-weight:800;margin-bottom:5px}.secure-sub{text-align:center;color:#c4d0e3;font-size:13px;margin-bottom:18px}.logout{background:#10294c;color:#fff;border:0;padding:13px;border-radius:10px;cursor:pointer;font-weight:700}.logout span{margin-right:8px}
+.main{padding:30px 38px;max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.topbar h1{margin:0 0 5px;font-size:30px;letter-spacing:-.5px}.top-right{display:flex;align-items:center;gap:18px}.bell{border:0;background:transparent;font-size:25px;color:#263550;cursor:pointer}.top-divider{height:42px;width:1px;background:#dfe5ee}.profile{display:flex;align-items:center;gap:11px}.profile b{font-size:15px}.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#e8f0ff;color:#1677f2;font-weight:800;font-size:15px}.chevron{font-size:20px;margin-left:8px}
+.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.balance-card{position:relative;overflow:hidden;background:linear-gradient(135deg,#2993f5,#1667eb);color:#fff;border:0;min-height:174px}.balance-card .card-label{color:#dcecff}.card-label{font-size:14px;font-weight:600}.amount{font-size:33px;font-weight:850;margin-top:13px}.balance-foot{margin-top:18px;font-size:14px}.balance-icon{position:absolute;right:24px;top:30px;width:56px;height:56px;border-radius:50%;background:#ffffff20;display:grid;place-items:center;font-size:28px;font-weight:800}.info-card{position:relative;min-height:174px}.info-icon{position:absolute;right:23px;top:25px;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;font-size:24px}.account-icon{background:#e9f1ff;color:#1677f2}.phone-icon{background:#e9fbef;color:#16a34a}.big-value{font-size:23px;font-weight:800;margin-top:14px}.subvalue{margin-top:10px;font-size:14px}
+.quick-card{margin-top:22px}.section-title{font-size:20px;font-weight:850}.section-head{margin-bottom:18px}.action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.action{border:1px solid var(--border);background:#fff;border-radius:14px;padding:19px 14px;text-align:center;cursor:pointer;transition:.18s;min-height:165px}.action:hover{transform:translateY(-2px);box-shadow:0 8px 24px #1b355012}.action strong{display:block;font-size:15px;margin:11px 0 6px}.action span{font-size:13px;color:var(--muted);line-height:1.4}.action-icon{width:58px;height:58px;border-radius:50%;margin:auto;display:grid;place-items:center;font-size:28px;font-weight:800}.action-green .action-icon{background:#e7faed;color:#16a34a}.action-red .action-icon{background:#ffe9eb;color:#dc2626}.action-blue .action-icon{background:#e8f0ff;color:#1677f2}.action-orange .action-icon{background:#fff2df;color:#f59e0b}.summary-card{margin-top:22px}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:20px}.summary-grid>div{padding:4px 22px;border-right:1px solid #e6ebf2}.summary-grid>div:first-child{padding-left:0}.summary-grid>div:last-child{border-right:0}.summary-grid small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}.summary-grid b{font-size:15px}.summary-balance{color:#16a34a}footer{text-align:center;color:#7c8ba3;font-size:12px;padding:25px 0 4px}
+.modal{position:fixed;inset:0;background:#061a3866;display:grid;place-items:center;padding:20px;z-index:20}.modal-card{width:min(440px,100%);background:#fff;border-radius:20px;padding:26px;box-shadow:0 25px 70px #0003}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal-head h2{margin:0}.close{border:0;background:#f1f5f9;border-radius:8px;padding:7px;cursor:pointer}
+@media(max-width:1050px){.layout{grid-template-columns:220px 1fr}.main{padding:25px}.action-grid{grid-template-columns:1fr 1fr}.summary-grid{grid-template-columns:1fr 1fr;gap:20px}.summary-grid>div{border-right:0;padding:4px 0}}
+@media(max-width:760px){.layout{display:block}.sidebar{min-height:auto;padding:18px}.brand{padding-bottom:18px}.secure-art,.secure-title,.secure-sub{display:none}.side-nav{margin:0}.logout{margin-top:12px}.main{padding:20px}.cards{grid-template-columns:1fr}.topbar{align-items:flex-start}.top-right{gap:8px}.top-right .bell,.top-divider{display:none}.profile .muted{display:none}.action-grid{grid-template-columns:1fr 1fr}.summary-grid{grid-template-columns:1fr}.summary-grid>div{border:0}}
+</style></head><body><div id="app"></div><script>
+const demoUsers=[
+ {accNo:"6371234122",username:"adam",password:"12345",mobileNo:"9999999999",address:"Noida, Uttar Pradesh",accType:"Saving",balance:500},
+ {accNo:"6371234123",username:"john",password:"678910",mobileNo:"8888888888",address:"Delhi, India",accType:"Current",balance:1000}
+];
+let users=JSON.parse(localStorage.getItem("novaUsers")||"null")||demoUsers;
+let current=JSON.parse(sessionStorage.getItem("novaCurrent")||"null");
+
+const app=document.querySelector("#app");
+function save(){localStorage.setItem("novaUsers",JSON.stringify(users));sessionStorage.setItem("novaCurrent",JSON.stringify(current))}
+function money(n){return "₹"+Number(n).toFixed(2)}
+function initials(){return current.username.slice(0,2).toUpperCase()}
+function render(){
+ if(!current){renderAuth("login");return}
+ renderDashboard();
+}
+function renderAuth(mode){
+ app.innerHTML=`<div class="auth"><div class="auth-card">
+ <div class="logo">Nova<span>Bank</span></div>
+ <h1>${mode==="login"?"Welcome back":"Create your account"}</h1>
+ <p class="muted">${mode==="login"?"Login to access your banking dashboard.":"Open your Nova Bank account in a few simple steps."}</p>
+ <form id="authForm">
+ ${mode==="register"?`<div class="field"><label>Username</label><input id="username" required></div>`:`<div class="field"><label>Username</label><input id="username" required></div>`}
+ <div class="field"><label>Password</label><input id="password" type="password" required></div>
+ ${mode==="register"?`
+ <div class="field"><label>Mobile Number</label><input id="mobile" maxlength="10" required></div>
+ <div class="field"><label>Address</label><input id="address" required></div>
+ <div class="field"><label>Account Type</label><select id="type"><option>Saving</option><option>Current</option></select></div>`:""}
+ <button class="btn btn-primary">${mode==="login"?"Login":"Create Account"}</button>
+ <div id="msg"></div></form>
+ <p class="muted">${mode==="login"?"Don't have an account?":"Already have an account?"}
+ <span class="link" id="switch">${mode==="login"?" Register":" Login"}</span></p>
+ </div></div>`;
+ document.querySelector("#switch").onclick=()=>renderAuth(mode==="login"?"register":"login");
+ document.querySelector("#authForm").onsubmit=e=>{
+  e.preventDefault();const u=username.value.trim(),p=password.value;
+  if(mode==="login"){
+   const found=users.find(x=>x.username===u&&x.password===p);
+   if(!found){msg.className="error";msg.textContent="Invalid username or password.";return}
+   current={...found};save();render();
+  }else{
+   if(users.some(x=>x.username===u)){msg.className="error";msg.textContent="Username already exists.";return}
+   const acc=String(Math.floor(100000000000+Math.random()*900000000000));
+   const nu={accNo:acc,username:u,password:p,mobileNo:mobile.value,address:address.value,accType:type.value,balance:500};
+   users.push(nu);save();msg.className="success";msg.textContent=`Account created. Account No: ${acc}`;
+   setTimeout(()=>renderAuth("login"),1200);
+  }
+ }
+}
+function renderDashboard(){
+ app.innerHTML=`<div class="layout">
+  <aside class="sidebar">
+   <div class="brand">
+    <div class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 20 24 7l18 13v4H6z" fill="currentColor"/><path d="M10 25h28v4H10zM13 30h5v10h-5zM21.5 30h5v10h-5zM30 30h5v10h-5zM7 41h34v3H7z" fill="currentColor"/></svg></div>
+    <div><div class="brand-name">Nova<span>Bank</span></div><div class="brand-tag">Your Trusted Banking Partner</div></div>
+   </div>
+   <nav class="side-nav"><button class="nav-item active" onclick="dashboard()"><span class="nav-icon">▦</span>Dashboard</button></nav>
+   <div class="secure-art"><div class="secure-bank">⌂</div><div class="secure-shield">✓</div></div>
+   <div class="secure-title">Secure Banking</div><div class="secure-sub">Your security is our priority</div>
+   <button class="logout" onclick="logout()"><span>↪</span> Logout</button>
+  </aside>
+  <main class="main">
+   <header class="topbar">
+    <div><h1>Dashboard</h1><div class="muted">Welcome back, ${current.username}! 👋</div></div>
+    <div class="top-right"><button class="bell" aria-label="Notifications">♧</button><div class="top-divider"></div><div class="profile"><div class="avatar">${initials()}</div><div><b>${current.username}</b><div class="muted">${current.accType} Account</div></div><span class="chevron">⌄</span></div></div>
+   </header>
+   <section class="cards">
+    <div class="card balance-card"><div class="card-label">Available Balance</div><div class="amount">${money(current.balance)}</div><div class="balance-foot">Account •••• ${current.accNo.slice(-4)}</div><div class="balance-icon">₹</div></div>
+    <div class="card info-card"><div class="info-icon account-icon">▣</div><div class="card-label">Account Number</div><div class="big-value">${current.accNo}</div><div class="muted subvalue">${current.accType} Account</div></div>
+    <div class="card info-card"><div class="info-icon phone-icon">⌕</div><div class="card-label">Mobile Number</div><div class="big-value">${current.mobileNo}</div><div class="muted subvalue">Registered mobile</div></div>
+   </section>
+   <section class="card quick-card"><div class="section-head"><div><div class="section-title">Quick Actions</div><div class="muted">Perform your banking operations easily</div></div></div>
+    <div class="action-grid">
+     <button class="action action-green" onclick="openTransaction('deposit')"><div class="action-icon">↓</div><strong>Deposit Money</strong><span>Add money to your account</span></button>
+     <button class="action action-red" onclick="openTransaction('withdraw')"><div class="action-icon">↑</div><strong>Withdraw Money</strong><span>Withdraw from your balance</span></button>
+     <button class="action action-blue" onclick="account()"><div class="action-icon">♙</div><strong>Account Details</strong><span>View your account information</span></button>
+     <button class="action action-orange" onclick="changePassword()"><div class="action-icon">▣</div><strong>Change Password</strong><span>Update your login password</span></button>
+    </div>
+   </section>
+   <section class="card summary-card"><div class="section-title">▤ &nbsp;Account Summary</div><div class="summary-grid">
+    <div><small>Username</small><b>${current.username}</b></div><div><small>Account Type</small><b>${current.accType} Account</b></div><div><small>Mobile Number</small><b>${current.mobileNo}</b></div><div><small>Balance</small><b class="summary-balance">${money(current.balance)}</b></div>
+   </div></section>
+   <footer>© 2026 Nova Bank. All rights reserved. &nbsp; • &nbsp; 🛡 Secure & Trusted Banking</footer>
+  </main>
+ </div>`;
+}
+function dashboard(){renderDashboard()}
+function modal(title,body){
+ const el=document.createElement("div");el.className="modal";el.innerHTML=`<div class="modal-card"><div class="modal-head"><h2>${title}</h2><button class="close">✕</button></div>${body}</div>`;
+ el.querySelector(".close").onclick=()=>el.remove();document.body.appendChild(el);return el
+}
+function openTransaction(kind){
+ const title=kind==="deposit"?"Deposit Money":"Withdraw Money";
+ const el=modal(title,`<p class="muted">Current balance: ${money(current.balance)}</p><form id="tx"><div class="field"><label>Amount</label><input id="amt" type="number" min="1" step="0.01" required></div><button class="btn btn-primary">Confirm ${kind}</button><div id="txmsg"></div></form>`);
+ el.querySelector("#tx").onsubmit=e=>{e.preventDefault();let a=Number(amt.value);
+ if(a<=0||(kind==="withdraw"&&a>current.balance)){txmsg.className="error";txmsg.textContent="Invalid amount or insufficient balance.";return}
+ current.balance += kind==="deposit"?a:-a;users=users.map(u=>u.username===current.username?{...u,balance:current.balance}:u);save();el.remove();renderDashboard()
+ }
+}
+function account(){
+ modal("Account Details",`<div class="details">
+ <div class="detail"><small>Account Number</small><b>${current.accNo}</b></div>
+ <div class="detail"><small>Username</small><b>${current.username}</b></div>
+ <div class="detail"><small>Mobile Number</small><b>${current.mobileNo}</b></div>
+ <div class="detail"><small>Account Type</small><b>${current.accType}</b></div>
+ <div class="detail" style="grid-column:1/-1"><small>Address</small><b>${current.address}</b></div>
+ <div class="detail" style="grid-column:1/-1"><small>Balance</small><b>${money(current.balance)}</b></div></div>`)
+}
+function changePassword(){
+ const el=modal("Change Password",`<form id="pw"><div class="field"><label>Old Password</label><input id="old" type="password" required></div><div class="field"><label>New Password</label><input id="neu" type="password" required></div><button class="btn btn-primary">Update Password</button><div id="pmsg"></div></form>`);
+ el.querySelector("#pw").onsubmit=e=>{e.preventDefault();if(old.value!==current.password){pmsg.className="error";pmsg.textContent="Invalid old password.";return}current.password=neu.value;users=users.map(u=>u.username===current.username?{...u,password:neu.value}:u);save();el.remove();alert("Password changed successfully.");}
+}
+function logout(){current=null;sessionStorage.removeItem("novaCurrent");renderAuth("login")}
+render();
+
+</script></body></html>

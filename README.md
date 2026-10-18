@@ -2,6 +2,9 @@
 
 A banking web application created using HTML, CSS, and JavaScript with the assistance of ChatGPT AI.
 
+## Live Demo
+[**Click here to use Nova Bank Web App**](https://shivamgupta6375.github.io/Nova-Bank-Web-App/)
+
 ## Features
 - User Registration and Login
 - Deposit and Withdraw Money
